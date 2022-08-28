@@ -7,8 +7,6 @@ const path = require('path');
 const request = require('request');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
-app.set('views', path.join(__dirname,'views'));
-app.set('view engine', 'ejs');
 
 // use body parser middlware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -60,5 +58,5 @@ app.get('/about.html', function(req, res) {
 });
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '.../public')));
 app.listen(PORT, () => console.log('Server Listening on Port ' + PORT));
