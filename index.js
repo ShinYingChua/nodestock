@@ -7,6 +7,7 @@ const path = require('path');
 const request = require('request');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
+app.set('views', path.join(__dirname,'views'));
 
 // use body parser middlware
 app.use(bodyParser.urlencoded({extended: false}));
